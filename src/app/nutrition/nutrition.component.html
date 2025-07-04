@@ -1,0 +1,46 @@
+<section class="nutrition-section">
+  <div class="container">
+    <h2 class="section-title">Recipe Search</h2>
+
+    <div class="search-container">
+      <input
+        type="text"
+        [(ngModel)]="searchQuery"
+        placeholder="Search for recipes (e.g., pizza, pasta)"
+        class="search-input"
+        (keyup.enter)="searchRecipes()"
+      />
+      <button (click)="searchRecipes()" class="search-button">Search</button>
+    </div>
+
+    <div *ngIf="isLoading" class="loading">Loading recipes...</div>
+
+    <div *ngIf="error" class="error-message">{{ error }}</div>
+
+    <div class="recipes-grid">
+      <div *ngFor="let recipe of recipes" class="recipe-card">
+        <img
+          [src]="recipe.image_url"
+          [alt]="recipe.title"
+          class="recipe-image"
+        />
+        <div class="recipe-info">
+          <h3 class="recipe-title">{{ recipe.title }}</h3>
+          <div class="recipe-ingredients">
+            <h4>Ingredients:</h4>
+            <ul>
+              <li *ngFor="let ingredient of recipe.ingredients">
+                {{ ingredient }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="nutrition-note">
+      Note: Calorie information is not provided by the Forkify API. For accurate
+      calorie data, consider integrating a nutrition API.
+    </p>
+  </div>
+</section>

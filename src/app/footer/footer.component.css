@@ -1,0 +1,32 @@
+.footer {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  color: #f8f9fa;
+  padding: 70px 0 40px;
+}
+.footer a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: #ffffff;
+}
+.footer-logo {
+  max-width: 140px;
+  margin-bottom: 25px;
+}
+.footer .list-inline-item {
+  margin: 0 20px;
+}
+.footer hr {
+  border-color: #94a3b8;
+  opacity: 0.3;
+  margin: 40px 0;
+}
+.footer .text-muted {
+  font-size: 0.85rem;
+}
+.footer .nav-link {
+  font-weight: 500;
+  font-size: 1.1rem;
+}

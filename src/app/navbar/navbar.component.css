@@ -1,0 +1,9 @@
+nav {
+  box-shadow: 0 0 11px 5px #f7f3f39e;
+  z-index: 9999;
+}
+i {
+  color: var(--coquelicot);
+  font-size: 25px;
+  transform: rotate(90deg);
+}
